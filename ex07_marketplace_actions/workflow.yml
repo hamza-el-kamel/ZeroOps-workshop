@@ -1,0 +1,14 @@
+name: Hello marketplace
+on: push
+
+jobs:
+  hello:
+    run-on: ubuntu-latest
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Verify Python installation
+        run: python --version 
