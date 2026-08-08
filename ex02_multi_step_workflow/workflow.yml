@@ -2,14 +2,15 @@ name: Hello workflow
 on: push
 
 jobs:
-  run-on: ubuntu-latest
-  steps:
+  hello:
+    run-on: ubuntu-latest
+    steps:
   
-    - name: Checkout
-      uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
   
-    - run: | 
-        echo "Repository: ${{ github.repository }}"  
-        echo "Branch: ${{ github.ref_name }}"
-        echo "Commit SHA: ${{ github.sha }}"
+      - run: | 
+          echo "Repository: ${{ github.repository }}"  
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit SHA: ${{ github.sha }}"
