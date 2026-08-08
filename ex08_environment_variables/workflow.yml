@@ -1,10 +1,22 @@
 name: Hello marketplace
+
 on: push
+
+env:
+  PYTHON_VERSION: '3.11'
+  PROJECT_NAME: 'Hello marketplace'
+  AUTHOR: 'hamza'
 
 jobs:
   hello:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
+
     steps:
-      - run: echo "Python version is $PYTHON_VERSION"
-      - uses: actions/checkout@v4
-      - run: echo "$PROJECT_NAME by hamza"
+      - name: Print Python version
+        run: echo "Python version is $PYTHON_VERSION"
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Print project and author
+        run: echo "$PROJECT_NAME by $AUTHOR"
