@@ -3,6 +3,7 @@ on: push
 
 jobs:
   steps:
+  run-on: ubuntu-latest
     - name: Checkout
       uses: actions/checkout@v4
 
