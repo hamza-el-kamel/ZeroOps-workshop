@@ -5,11 +5,11 @@ jobs:
   backend:
     run-on: ubuntu-latest
     steps:
-      -uses: actions/checkout@v4
-      -run: echo "Testing backend"
+      - uses: actions/checkout@v4
+      - run: echo "Testing backend"
   
   frontend:
     run-on: ubuntu-latest
     steps:
-      -uses: actions/checkout@v4
-      -run: echo "Testing frontend"
+      - uses: actions/checkout@v4
+      - run: echo "Testing frontend"
