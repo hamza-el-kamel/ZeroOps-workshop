@@ -1,0 +1,22 @@
+name: finall challneg
+on: 
+  push:
+    branches:
+      - main
+
+
+env:
+  API_KEY: ${{ secrets.API_KEY }}
+  PROJECT_NAME: 'Hello marketplace'
+
+jobs:
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/checkout@v4
+      - run: pip install -r requirements.txt
+      - run: pytest
+      - run: echo "Pipeline completed successfully!"
