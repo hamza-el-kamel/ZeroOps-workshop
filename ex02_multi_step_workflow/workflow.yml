@@ -1,0 +1,16 @@
+name: Hello workflow
+on: push
+
+jobs:
+  steps:
+  - name: Checkout
+    uses: actions/checkout@v4
+
+  - name: Echo repository
+    run: echo "Repository: ${{ github.repository }}"
+
+  - name: Echo branch
+    run: echo "Branch: ${{ github.ref_name }}"
+
+  - name: Echo Commit SHA
+    run: echo "Commit SHA: ${{ github.sha }}"
