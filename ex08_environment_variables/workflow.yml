@@ -1,0 +1,10 @@
+name: Hello marketplace
+on: push
+
+jobs:
+  hello:
+    run-on: ubuntu-latest
+    steps:
+      - run: echo "Python version is $PYTHON_VERSION"
+      - uses: actions/checkout@v4
+      - run: echo "$PROJECT_NAME by hamza"
