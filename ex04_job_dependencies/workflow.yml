@@ -1,0 +1,14 @@
+name: Hello workflow
+on: push
+
+jobs:
+  backend:
+    run-on: ubuntu-latest
+    steps:
+      - run: echo "Backend tests passing"
+  
+  frontend:
+    needs: backend
+    run-on: ubuntu-latest
+    steps:
+      - run: echo "Building frontend after backend success"
