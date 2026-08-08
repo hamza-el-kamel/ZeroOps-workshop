@@ -1,0 +1,13 @@
+name: Hello secrets
+on: push
+
+env:
+  API_KEY: ${{ secrets.API_KEY }}
+
+jobs:
+  secrets:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Key length: ${#API_KEY}"
